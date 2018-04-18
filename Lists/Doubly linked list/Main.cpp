@@ -19,6 +19,8 @@ int main()
 	pp.add_back(30);
 	pp.add_back(50);
 
+	pp.remove_front();
+
 	cout << "All data:" << endl;
 	pp.print_all();
 

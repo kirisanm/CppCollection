@@ -17,8 +17,10 @@ Linkedlist::Linkedlist() {
 	size = 0;
 }
 
-Linkedlist::~Linkedlist() {
-	// Destructur
+Linkedlist::~Linkedlist(){
+	for (int i = 0; i < size; i++) {
+		remove_front();
+	}
 }
 
 bool Linkedlist::is_empty() {
@@ -64,7 +66,19 @@ void Linkedlist::add_back(int d) {
 	size++;
 }
 
-void Linkedlist::print_all() {
+void Linkedlist::remove_front() {
+	if (is_empty()) {
+		cout << "Empty list" << endl;
+	}
+	else {
+		Node* temp = head->next;
+		delete head;
+		head = temp;
+		size--;
+	}
+}
+
+void Linkedlist::print_all(){
 	Node* temp = head;
 	for (int i = 0; i < size;i++) {
 		cout << temp->data << " ";
