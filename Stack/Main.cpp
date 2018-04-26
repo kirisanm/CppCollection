@@ -1,7 +1,6 @@
 // Coded & developed by Kirisan Manivannan
 
 #include <iostream>
-#include <stack>
 #include "Header.h"
 
 using namespace std;
